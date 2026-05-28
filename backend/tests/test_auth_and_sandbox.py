@@ -78,3 +78,22 @@ def test_sandbox_verifier_rejects_unsafe_command():
     assert response.status_code == 200
     assert response.data["accepted"] is False
 
+
+@pytest.mark.django_db
+def test_sandbox_verifier_accepts_correct_command():
+    user = User.objects.create_user(username="test_student", password="strongpass123")
+    client = APIClient()
+    client.force_authenticate(user=user)
+
+    response = client.post(
+        "/api/sandbox/verify/",
+        {"command": "git status", "expected_command": "git status"},
+        format="json",
+    )
+
+    assert response.status_code == 200
+    assert response.data["accepted"] is True
+    assert response.data["score_delta"] == 10
+    assert "Correct command" in response.data["feedback"]
+
+

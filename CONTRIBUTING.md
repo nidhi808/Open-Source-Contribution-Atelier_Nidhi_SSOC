@@ -9,6 +9,27 @@ Thanks for contributing to Open Source Contribution Atelier.
 - Add tests for backend and frontend changes when practical
 - Discuss large architectural changes before implementation
 
+## Getting Started for SSoC
+
+Welcome, Social Summer of Code (SSoC) Season 5 contributors! We are thrilled to have you here. To help you make high-quality, impactful contributions, follow this structured path:
+
+### 1. Suggested First Tasks
+If you are new to the codebase, look for issues with the following labels:
+*   `good first issue` or `ssoc:good-first-issue`: Small, self-contained tasks (like typos, documentation, or minor UI tweaks).
+*   `SSOC`: Standard issues curated specifically for the SSOC timeline.
+*   **View all beginner-friendly issues here**: [Good First Issues](https://github.com/nidhi808/Open-Source-Contribution-Atelier_Nidhi_SSOC/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
+
+### 2. Mentorship & Guidelines
+*   **Ask to be assigned**: Comment on the issue you wish to work on. Please wait for a maintainer/mentor to assign the issue to you before writing code.
+*   **One issue at a time**: To keep the contribution process fair, we only assign one issue per contributor at a time.
+*   **Timeline**: Once assigned, you have **3 days** to open a draft PR or submit your changes. If there is no activity, the issue may be reassigned to keep the project moving forward.
+
+### 3. Communication Channels
+*   Use the **SSOC Discord server** inside the dedicated project channel to ask quick questions or discuss implementation details with mentors.
+*   For technical discussions related to a specific issue, use that **GitHub Issue comments** so all project maintainers can view the context.
+
+---
+
 ## Setup
 
 Use the instructions in [README.md](README.md) to run the project locally.

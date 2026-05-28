@@ -2,7 +2,7 @@
 name: Bug report
 about: Report a reproducible bug in the learning platform
 title: "bug: "
-labels: ["bug", "needs-triage"]
+labels: ["bug", "needs-triage", "SSOC"]
 assignees: ''
 
 ---

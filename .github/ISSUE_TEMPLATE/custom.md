@@ -2,7 +2,7 @@
 name: Lesson proposal
 about: Propose a new lesson, exercise, or learning module
 title: "lesson: "
-labels: ["curriculum", "needs-triage"]
+labels: ["curriculum", "needs-triage", "SSOC"]
 assignees: ''
 
 ---

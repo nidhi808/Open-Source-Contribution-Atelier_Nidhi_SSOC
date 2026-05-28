@@ -2,7 +2,7 @@
 name: Feature request
 about: Suggest a product or curriculum improvement
 title: "feat: "
-labels: ["enhancement", "needs-triage"]
+labels: ["enhancement", "needs-triage", "SSOC"]
 assignees: ''
 
 ---

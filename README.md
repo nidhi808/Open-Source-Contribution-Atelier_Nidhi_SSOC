@@ -72,6 +72,8 @@ VITE_GOOGLE_CLIENT_ID=your-google-oauth-client-id.apps.googleusercontent.com
 
 In Google Cloud Console, add `http://localhost:5173` under **Authorized JavaScript origins**.
 
+For full step-by-step instructions on setting up Google credentials and troubleshooting common authentication issues (such as 401 errors), see our [Google OAuth Setup Guide](docs/oauth.md).
+
 3. Backend:
 
 ```bash

@@ -162,3 +162,5 @@ python manage.py seed_lessons
 ```
 
 This creates the basic lesson track used by the frontend; re-running is safe and idempotent.
+
+For complete documentation on the curriculum architecture, how lessons and exercises are serialized, and how to add new lessons, see our [Curriculum and Lesson Management Guide](docs/curriculum.md).

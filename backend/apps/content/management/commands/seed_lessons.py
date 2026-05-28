@@ -275,6 +275,141 @@ LESSONS = [
             }
         ],
     },
+    {
+        "slug": "git-stash",
+        "difficulty": "intermediate",
+        "title": "Git Stash",
+        "summary": "Save uncommitted work temporarily without committing.",
+        "content": "Stashing allows you to clean up your working directory and switch branches without losing your current progress. You can easily retrieve your changes later.",
+        "learning_objectives": [
+            "Save dirty working state temporarily",
+            "Apply or pop stashed changes",
+            "Inspect and drop specific stashes",
+        ],
+        "tips": [
+            "Use git stash -u to include untracked files.",
+            "Give stashes descriptive names using git stash save 'message'.",
+        ],
+        "order": 10,
+        "estimated_minutes": 10,
+        "exercises": [
+            {
+                "title": "Pop stashed changes",
+                "prompt": "Apply and remove the most recent stash.",
+                "expected_command": "git stash pop",
+                "explanation": "git stash pop applies the top stash and deletes it from your stash list.",
+                "points": 10,
+            }
+        ],
+    },
+    {
+        "slug": "git-cherry-pick",
+        "difficulty": "intermediate",
+        "title": "Cherry-Picking Commits",
+        "summary": "Apply specific commits from other branches.",
+        "content": "Cherry-picking lets you select a specific commit from another branch and apply it to your current branch. This is incredibly useful for hotfixes.",
+        "learning_objectives": [
+            "Apply targeted changes using commit hashes",
+            "Avoid full branch merges when not needed",
+            "Handle cherry-picking conflicts",
+        ],
+        "tips": [
+            "Get the exact commit hash first using git log.",
+            "Use -x flag to record original commit source in the message.",
+        ],
+        "order": 11,
+        "estimated_minutes": 12,
+        "exercises": [
+            {
+                "title": "Cherry-pick a commit",
+                "prompt": "Apply commit a1b2c3d to the current branch.",
+                "expected_command": "git cherry-pick a1b2c3d",
+                "explanation": "git cherry-pick applies the exact changes introduced by commit a1b2c3d.",
+                "points": 10,
+            }
+        ],
+    },
+    {
+        "slug": "interactive-rebase",
+        "difficulty": "advanced",
+        "title": "Interactive Rebase",
+        "summary": "Squash and clean up commit history.",
+        "content": "Interactive rebasing lets you rewrite commit history. You can edit messages, reorder commits, or squash multiple commits into one tidy commit before submitting a PR.",
+        "learning_objectives": [
+            "Squash multiple local commits for cleaner history",
+            "Reword old commit messages",
+            "Reorder, edit, or drop specific commits",
+        ],
+        "tips": [
+            "Never interactive rebase commits that have already been pushed to a shared main branch.",
+            "Use HEAD~N to select the last N commits.",
+        ],
+        "order": 12,
+        "estimated_minutes": 15,
+        "exercises": [
+            {
+                "title": "Interactive rebase last 3 commits",
+                "prompt": "Start interactive rebase for the last 3 commits.",
+                "expected_command": "git rebase -i HEAD~3",
+                "explanation": "git rebase -i opens your configured editor to modify the last 3 commits.",
+                "points": 12,
+            }
+        ],
+    },
+    {
+        "slug": "git-bisect",
+        "difficulty": "advanced",
+        "title": "Git Bisect",
+        "summary": "Find the commit that introduced a bug using binary search.",
+        "content": "Git bisect performs a binary search through your commit history to find the exact commit that introduced a regression or bug.",
+        "learning_objectives": [
+            "Identify good and bad commits to mark boundaries",
+            "Perform binary search through git history",
+            "Automate bisect using custom test scripts",
+        ],
+        "tips": [
+            "Use a known stable tag or commit hash as the 'good' boundary.",
+            "Make sure your tests are reliable before starting bisect.",
+        ],
+        "order": 13,
+        "estimated_minutes": 18,
+        "exercises": [
+            {
+                "title": "Mark commit as good",
+                "prompt": "Mark the current commit as good during bisect.",
+                "expected_command": "git bisect good",
+                "explanation": "git bisect good informs Git that the current checked-out commit is bug-free.",
+                "points": 12,
+            }
+        ],
+    },
+    {
+        "slug": "git-submodules",
+        "difficulty": "advanced",
+        "title": "Git Submodules",
+        "summary": "Manage sub-repositories within a parent repository.",
+        "content": "Submodules allow you to keep another Git repository as a subdirectory of a parent repository. This is useful for shared libraries or static resources.",
+        "learning_objectives": [
+            "Clone and initialize external submodules",
+            "Update submodules to latest upstream commits",
+            "Understand detached HEAD state inside submodules",
+        ],
+        "tips": [
+            "Always run git submodule update --init --recursive after cloning a repo with submodules.",
+            "Commit submodule pointer updates in the parent repo.",
+        ],
+        "order": 14,
+        "estimated_minutes": 15,
+        "exercises": [
+            {
+                "title": "Initialize submodules",
+                "prompt": "Initialize and clone all submodules recursively.",
+                "expected_command": "git submodule update --init --recursive",
+                "explanation": "This command initializes the local configuration file, and fetches all submodule data recursively.",
+                "points": 15,
+            }
+        ],
+    },
 ]
 
 

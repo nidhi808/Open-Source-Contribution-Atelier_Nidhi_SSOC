@@ -6,4 +6,4 @@ Acceptance criteria:
 - Run Lighthouse/axe and create issues for top 10 accessibility problems
 - Fix heading structure and ARIA attributes for navigation and lesson content
 
-Labels: SSOC, accessibility
+Labels: ssoc:good-first-issue, SSOC, accessibility

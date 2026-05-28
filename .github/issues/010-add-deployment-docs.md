@@ -6,4 +6,4 @@ Acceptance criteria:
 - Add `docs/deploy.md` with step-by-step deploy guide and environment variables
 - Provide a sample `docker-compose.production.yml` or guidance
 
-Labels: SSOC, docs
+Labels: ssoc:good-first-issue, SSOC, docs

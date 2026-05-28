@@ -8,6 +8,18 @@ Thanks for contributing to Open Source Contribution Atelier.
 - Prefer safe defaults and avoid introducing secrets into code
 - Add tests for backend and frontend changes when practical
 - Discuss large architectural changes before implementation
+## Onboarding Tasks
+
+To help you get started with your first contribution, we have curated a list of 8 small, self-contained onboarding tasks across the frontend and backend. These are excellent beginner-friendly entry points:
+
+- [ ] [Document Google OAuth setup for local development](.github/issues/005-fix-google-oauth-docs.md) — *Docs & Setup*
+- [ ] [Harden CI: add lint, tests, and preview build](.github/issues/006-add-ci-workflow.md) — *Infrastructure & CI*
+- [ ] [Add example lessons and exercises for new contributors](.github/issues/007-add-examples-lessons.md) — *Backend & Content*
+- [ ] [Improve tests and coverage](.github/issues/008-improve-tests-and-coverage.md) — *Tests & Quality*
+- [ ] [Perform accessibility audit and fixes](.github/issues/009-accessibility-audit.md) — *Frontend & Accessibility*
+- [ ] [Add deployment and hosting guide](.github/issues/010-add-deployment-docs.md) — *Docs & Infrastructure*
+- [ ] [Create mentorship list and assignment flow](.github/issues/011-create-mentorship-list.md) — *Community & Process*
+- [ ] [Easy UI polish tasks for new contributors](.github/issues/012-easy-ui-polish.md) — *Frontend & UI*
 
 ## Setup
 

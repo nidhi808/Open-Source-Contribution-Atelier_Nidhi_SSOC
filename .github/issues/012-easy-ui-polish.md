@@ -6,4 +6,4 @@ Acceptance criteria:
 - Create at least 6 'ui' issues tagged `ssoc:good-first-issue`
 - Provide before/after screenshots in examples
 
-Labels: SSOC, good first issue
+Labels: ssoc:good-first-issue, SSOC, good first issue

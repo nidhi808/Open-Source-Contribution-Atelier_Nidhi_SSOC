@@ -6,4 +6,4 @@ Acceptance criteria:
 - Add `MENTORS.md` with suggested contacts and areas
 - Create an issue template for mentor request
 
-Labels: SSOC, process
+Labels: ssoc:good-first-issue, SSOC, process

@@ -6,4 +6,4 @@ Acceptance criteria:
 - Add missing unit tests for `apps.sandbox`, `apps.notifications`, and a few frontend components
 - Add coverage reporting to CI and fail if coverage drops below acceptable threshold
 
-Labels: SSOC, tests
+Labels: ssoc:good-first-issue, SSOC, tests

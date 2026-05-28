@@ -6,4 +6,4 @@ Acceptance criteria:
 - Add step-by-step instructions in `docs/oauth.md` and link in `README.md`.
 - Add troubleshooting tips for 401 errors.
 
-Labels: SSOC, docs
+Labels: ssoc:good-first-issue, SSOC, docs

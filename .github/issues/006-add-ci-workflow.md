@@ -6,4 +6,4 @@ Acceptance criteria:
 - Add lint job for `frontend` (ESLint) and `backend` (flake8 or pylint)
 - Fail on lint errors in PRs
 
-Labels: SSOC, infra
+Labels: ssoc:good-first-issue, SSOC, infra

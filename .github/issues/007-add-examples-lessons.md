@@ -6,4 +6,4 @@ Acceptance criteria:
 - Add 5 more example lessons with exercises and expected commands
 - Document how to add new lessons (management command, serializers)
 
-Labels: SSOC, help wanted
+Labels: ssoc:good-first-issue, SSOC, help wanted

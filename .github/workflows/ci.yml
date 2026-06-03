@@ -6,10 +6,16 @@ on:
   pull_request:
     types: [opened, reopened]
 
+permissions:
+  issues: write
+  pull-requests: write
+  contents: read
+
 jobs:
   issue-etiquette:
     name: Auto Comment on Issues
     runs-on: ubuntu-latest
+    if: github.event.issue != null
     steps:
       - uses: actions/github-script@v7
         with:
@@ -24,6 +30,7 @@ jobs:
   issue-labels:
     name: Auto Label Issues
     runs-on: ubuntu-latest
+    if: github.event.issue != null
     steps:
       - uses: actions/github-script@v7
         with:
@@ -57,6 +64,7 @@ jobs:
   pr-review:
     name: Auto Review PR
     runs-on: ubuntu-latest
+    if: github.event.pull_request != null
     steps:
       - uses: actions/github-script@v7
         with:
@@ -71,6 +79,7 @@ jobs:
   pr-label-sync:
     name: Sync Labels from Issue
     runs-on: ubuntu-latest
+    if: github.event.pull_request != null
     steps:
       - uses: actions/github-script@v7
         with:

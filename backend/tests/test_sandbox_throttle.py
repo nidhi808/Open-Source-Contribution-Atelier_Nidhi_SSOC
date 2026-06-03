@@ -19,6 +19,9 @@ class SandboxThrottleTest(TestCase):
         
         response = self.client.post(SANDBOX_URL, {"code": "print(1)"}, format="json")
         self.assertEqual(response.status_code, status.HTTP_429_TOO_MANY_REQUESTS)
+        self.assertIn("Retry-After", response.headers)
+        self.assertEqual(response.data["error"], "Rate limit exceeded.")
+        self.assertEqual(response.data["type"], "rate_limit_exceeded")
 
     def test_authenticated_throttle(self):
         """Ensure authenticated users are also throttled after 10 requests."""
@@ -29,3 +32,6 @@ class SandboxThrottleTest(TestCase):
         
         response = self.client.post(SANDBOX_URL, {"code": "print(1)"}, format="json")
         self.assertEqual(response.status_code, status.HTTP_429_TOO_MANY_REQUESTS)
+        self.assertIn("Retry-After", response.headers)
+        self.assertEqual(response.data["error"], "Rate limit exceeded.")
+        self.assertEqual(response.data["type"], "rate_limit_exceeded")

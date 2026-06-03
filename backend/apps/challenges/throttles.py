@@ -1,5 +1,12 @@
 from rest_framework.throttling import AnonRateThrottle, UserRateThrottle
-from rest_framework.exceptions import Throttled
+from rest_framework.exceptions import Throttled, APIException
+
+
+class SandboxThrottled(Throttled):
+    """Custom Throttled exception that allows dictionary details and sets wait time."""
+    def __init__(self, wait=None, detail=None, code=None):
+        self.wait = wait
+        APIException.__init__(self, detail, code)
 
 
 class SandboxAnonRateThrottle(AnonRateThrottle):
@@ -7,11 +14,14 @@ class SandboxAnonRateThrottle(AnonRateThrottle):
     scope = "sandbox_anon"
 
     def throttle_failure(self):
-        raise Throttled(detail={
-            "error": "Rate limit exceeded.",
-            "message": "You can only execute 10 sandbox requests per minute. Please wait before retrying.",
-            "type": "rate_limit_exceeded",
-        })
+        raise SandboxThrottled(
+            wait=self.wait(),
+            detail={
+                "error": "Rate limit exceeded.",
+                "message": "You can only execute 10 sandbox requests per minute. Please wait before retrying.",
+                "type": "rate_limit_exceeded",
+            }
+        )
 
 
 class SandboxUserRateThrottle(UserRateThrottle):
@@ -19,8 +29,11 @@ class SandboxUserRateThrottle(UserRateThrottle):
     scope = "sandbox_user"
 
     def throttle_failure(self):
-        raise Throttled(detail={
-            "error": "Rate limit exceeded.",
-            "message": "You can only execute 10 sandbox requests per minute. Please wait before retrying.",
-            "type": "rate_limit_exceeded",
-        })
+        raise SandboxThrottled(
+            wait=self.wait(),
+            detail={
+                "error": "Rate limit exceeded.",
+                "message": "You can only execute 10 sandbox requests per minute. Please wait before retrying.",
+                "type": "rate_limit_exceeded",
+            }
+        )
